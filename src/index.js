@@ -575,6 +575,7 @@ function resetGame() {
     currentPlayer = 1;
     round = 1;
     isGameOver = false;
+    hideOverlay();
 
     getRandomWord()
     .then(word => {
@@ -586,7 +587,7 @@ function resetGame() {
         playerInput.removeAttribute('placeholder');
         resizeInput();
         setFormDisabledTo(false);
-        hideOverlay();
+        
     })
 }
 
